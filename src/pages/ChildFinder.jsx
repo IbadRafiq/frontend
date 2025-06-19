@@ -22,7 +22,7 @@ const ChildReport = () => {
   const fetchTeams = async () => {
     setLoading(true);
     try {
-      const res = await fetch('http://localhost:3001/api/report', {
+      const res = await fetch(`${BASE_URL}/api/report', {
         headers: { Authorization: `Bearer ${getToken()}` },
       });
       if (!res.ok) {
