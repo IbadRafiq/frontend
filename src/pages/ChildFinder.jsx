@@ -22,9 +22,9 @@ const ChildReport = () => {
   const fetchTeams = async () => {
     setLoading(true);
     try {
-      const res = await fetch(`${BASE_URL}/api/report', {
-        headers: { Authorization: `Bearer ${getToken()}` },
-      });
+      const res = await fetch(`${BASE_URL}/api/report`, {
+  headers: { Authorization: `Bearer ${getToken()}` },
+});
       if (!res.ok) {
         if (res.status === 401) {
           throw new Error('Unauthorized access. Please login.');
